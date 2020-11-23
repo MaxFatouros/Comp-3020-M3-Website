@@ -1,0 +1,12 @@
+.main{text-align: center;width: 400px;height: 350px;background: brown;display: table;}
+.main{background-color: rgba();}
+.image{position: relative;}
+.context{display: table-cell;vertical-align: middle;}
+.context{font-size: 40px;
+			letter-spacing: 5px;
+			position: absolute;
+			top:50%;
+			left:40%;
+		}
+			
+.imgBox{display: table-cell;vertical-align: middle;}
