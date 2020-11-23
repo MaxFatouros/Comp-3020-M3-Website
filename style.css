@@ -1,63 +1,7 @@
-
-
-
-body {
-  padding: 5rem 10rem;
-  background-color: #efc9af;
-  color: #1f8ac0;
+.links a:link{
+  color: #555;
+  text-decoration: none;
 }
-.restaurants-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.filter-container {
-  align-self: flex-start;
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  background-color: #1f8ac0;
-}
-
-li {
-  list-style: none;
-}
-
-button {
-  border: none;
-  padding: 1rem 2rem 1rem 2rem;
-  background: transparent;
-  cursor: pointer;
-  margin: 1rem 0rem;
-  color: white;
-}
-
-button:focus {
-  background-color: black;
-}
-
-.restaurant {
-  margin: 1rem;
-  padding: 1rem;
-  border: 2px solid red;
-  cursor: pointer;
-}
-
-.restaurants {
-  padding-right: 20%;
-}
-
-.selected {
-  background-color: black;
-}
-
-.description {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
-
-.description h4 {
-  padding-left: 0.5rem;
+.links a:link:hover{
+  color: #000;
 }
