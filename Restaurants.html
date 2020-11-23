@@ -1,4 +1,24 @@
-<html>
-sample for links
-<br> Restaurants Page
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="restaurants-container">
+      <div class="filter-container">
+        <h1 style="color: black">Filter</h1>
+        <button id="health">sort by Health</button>
+        <button id="money">sort by money</button>
+        <button id="distance">sort by distance</button>
+      </div>
+      <div class="restaurants">
+        <ul id="restList" class="restaurant-list"></ul>
+      </div>
+    </div>
+    <script src="restaurants.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>
