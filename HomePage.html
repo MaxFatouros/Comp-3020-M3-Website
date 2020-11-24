@@ -8,41 +8,43 @@
       font-size: 40px;
       padding: 5%;
     }
-    body {
-      font-family: sans-serif;
-      font-weight:  600;
-      background-color: #eeeeee
-    }
     input {
       width: 100%;
       height: 50px;
       font-size: 50%;
       padding: 1%;
     }
+    input[type=text]:hover {
+      background-color: #fafafa;
+    }
+    input[type=text]:focus {
+      border: inset;
+    }
     input[type=submit] {
-      background-color: #333;
+      background-color: #333333;
       color: white;
     }
     input[type=submit]:hover {
-      background-color: #222
+      background-color: #222222
     }
     td {
-      padding: 10px
+      /* padding: 10px; */
+
     }
     </style>
 
-    <link rel="stylesheet" href="style.css"
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
 
     <div align=right class="links">
-      Home / <a href="Restaurants.html"> Restaurants</a> / <a href="#"> Checkout </a>
+      Home / <a href="Restaurants.html"> Restaurants</a> / <a href="Cart.html"> Cart </a>
 
     </div>
       <div class="box">
         <form action="Restaurants.html">
 
-          <input type="text" id="Address" name="Address" placeholder=" Enter Your address"
+          <input type="text" id="Address" name="Address" placeholder="Enter Your address"
           size="50">
 
           <input type="submit" value="Restaurants Near You"><br>

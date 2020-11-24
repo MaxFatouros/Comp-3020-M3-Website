@@ -4,7 +4,7 @@
 body {
   padding: 5rem 10rem;
   background-color: #efc9af;
-  color: #1f8ac0;
+  /* color: #1f8ac0; */
 }
 .restaurants-container {
   display: flex;
@@ -33,6 +33,10 @@ button {
   color: white;
 }
 
+button:hover {
+  background-color: #0f465f;
+}
+
 button:focus {
   background-color: black;
 }
@@ -40,8 +44,15 @@ button:focus {
 .restaurant {
   margin: 1rem;
   padding: 1rem;
-  border: 2px solid red;
+  border: 1px solid grey;
+  /* border: outset; */
   cursor: pointer;
+  background-color: #fff
+}
+
+.restaurant:hover {
+  background-color: #ccc;
+  border: outset;
 }
 
 .restaurants {

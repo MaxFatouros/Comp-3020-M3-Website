@@ -3,16 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restaurant</title>
+    <title>Restaurants</title>
     <link rel="stylesheet" href="Restaurants.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
+    <nav align="right" class="links">
+      <a href="HomePage.html">Home</a> / Restaurants / <a href="Cart.html"> Cart </a>
+    </nav>
+
     <div class="restaurants-container">
       <div class="filter-container">
-        <h1 style="color: black">Filter</h1>
-        <button id="health">sort by Health</button>
-        <button id="money">sort by money</button>
-        <button id="distance">sort by distance</button>
+        <h1 style="color: black">Sort by</h1>
+        <button id="health">Health</button>
+        <button id="money">Cost</button>
+        <button id="distance">Distance</button>
       </div>
       <div class="restaurants">
         <ul id="restList" class="restaurant-list"></ul>
