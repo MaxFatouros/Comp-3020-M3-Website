@@ -40,11 +40,10 @@ body {
 }
 .menu {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 .single-menu {
-  flex-basis: 580px;
   margin-bottom: 40px;
   padding-bottom: 40px;
   border-bottom: 1px solid #ddd;
@@ -80,4 +79,9 @@ body {
   float: right;
   color: #ff7720;
   font-style: italic;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
 }
