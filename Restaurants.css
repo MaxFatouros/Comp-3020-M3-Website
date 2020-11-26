@@ -44,7 +44,7 @@ button:focus {
 .restaurant {
   margin: 1rem;
   padding: 1rem;
-  border: 1px solid grey;
+  border: 2px solid grey;
   /* border: outset; */
   cursor: pointer;
   background-color: #fff
@@ -52,7 +52,7 @@ button:focus {
 
 .restaurant:hover {
   background-color: #ccc;
-  border: outset;
+  border: 2px solid black;
 }
 
 .restaurants {
