@@ -43,17 +43,19 @@ document.querySelector("#distance").addEventListener("click", () => {
 });
 
 const renderRest = () => {
-  allRestaurants.map(({ name, distance, expenseRating, healthLevel, id }) => {
+  allRestaurants.map(({ name, distance, expenseRating, healthLevel, id, image}) => {
     li = document.createElement("li");
     li.classList.add("restaurant");
     li.innerHTML = `
+		  <div class="image" style="background-image: url(${image}); background-size: 100% 100%;" ;>
           <h1> ${name} </h1>
-          <div class="description"> 
+          <div class="description";> 
             <h4> HealthMeter:${healthLevel} </h4>
             <h4> Distance:${distance}km </h4>
             <h4> MoneyRate:${expenseRating} </h4>
           <div>
-          <a href="/components/restaurant${id}.html"> more </a>    
+          <a href="/components/restaurant${id}.html"> more </a> 
+		  <div> 
         `;
     ul.appendChild(li);
   });
