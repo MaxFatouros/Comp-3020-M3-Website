@@ -2,7 +2,7 @@
 
 
 body {
-  padding: 5rem 10rem;
+  /* padding: 5rem 10rem; */
   background-color: #efc9af;
   /* color: #1f8ac0; */
 }
@@ -16,6 +16,7 @@ body {
   align-self: flex-start;
   display: flex;
   flex-direction: column;
+  margin-left: 8vw;
   padding: 2rem;
   background-color: #1f8ac0;
 }

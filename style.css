@@ -1,3 +1,33 @@
+body {
+  font-family: sans-serif;
+  font-weight:  600;
+  background-color: #eeeeee;
+  margin: 0;
+}
+
+.logo  a {
+  font-size: 0;
+
+  /* border: 2px solid red; */
+}
+.logo {
+  /* width: 100px: */
+}
+.logo a img {
+  border-radius: 50%;
+  width:100px;
+  margin: 2vh;
+
+
+
+  /* border: solid 1px red; */
+}
+.logo img:hover {
+  /* width:110px; */
+}
+
+
+
 
 .links a:link{
   color: #555;
@@ -6,11 +36,16 @@
 .links a:hover{
   color: #000;
 }
-.logo {
-/* src: */
+
+footer {
+  display: flex;
+  justify-content: center;
 }
-body {
-  font-family: sans-serif;
-  font-weight:  600;
-  background-color: #eeeeee
+footer table tr {
+  display: flex;
+  justify-content: space-around;
+}
+
+hr {
+  margin: 10vh 5vw 0 5vw;
 }

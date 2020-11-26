@@ -15,7 +15,7 @@
       /* margin-top: 30vh; */
       /* margin-bottom: 10vh; */
       /* padding: 1vh; */
-      padding-top: 30vh;
+      /* padding-top: 30vh; */
       padding-bottom: 10vh;
       background-image: url("images/Large Background Homepage.webp");
       background-repeat: no-repeat;
@@ -31,6 +31,9 @@
       /* font-size: 3vh; */
       margin: 0;
       border-radius: 5px;
+    }
+    input[type=text] {
+      margin-top: 20vh;
     }
     input[type=text]:hover, input[type=text]:focus {
       /* background-color: #fafafa; */
@@ -71,7 +74,8 @@
       /* background-color: grey; */
       overflow: hidden;
       position: relative;
-      margin-bottom: 6vh;
+      /* margin-top:5vh; */
+      margin-bottom: -3vh;
 
       /* border: 2px solid black; */
     }
@@ -110,41 +114,55 @@
       justify-content: center;
       width: var(--marquee-element-width);
       flex-shrink: 0;
-      font-size: calc(var(--marquee-height)*2/3);
+      /* font-size: calc(var(--marquee-height)*2/3); */
       white-space: nowrap;
       padding: 15px;
 
       /* border: 4px solid black; */
     }
-    .marquee-content li img {
+    .marquee-content li a img {
       display: block;
       margin: auto;
       max-width: 800px;
-      border-radius: 10%;
       box-shadow: 5px 10px 10px #888888;
       width: 95%;
-      /* size: 95%; */
 
       /* border: 5px solid red; */
+    }
+    .marquee-content li a, .marquee-content li a img {
+      border-radius: 10%;
     }
     .marquee-content li img:hover {
       width: 100%;
     }
 
-    footer {
-      display: flex;
-      justify-content: center;
-    }
-    footer table tr {
-      display: flex;
-      justify-content: space-around;
-    }
+
     </style>
 
   </head>
-  <body>
+
+
+
+
+
+
+
+
+
+
+
+  <body style="margin:0;">
+
+
 
     <div class="box">
+
+      <div style="text-align: left;" class="logo">
+        <a href="index.html">
+          <img src="images/icon-leaf-logo.png" alt="Logo">
+        </a>
+      </div>
+
       <form action="restaurants.html">
 
         <input type="text" id="Address" name="Address" placeholder="Enter Your address"><br>
@@ -159,15 +177,11 @@
       <div class="marquee">
 
         <ul class="marquee-content">
-          <li><a href="restaurants.html"><img src="Images\Square Pizza.jpg" alt="Pizza"></a></li>
-          <li><a href="restaurants.html"><img src="Images\Square Burger.jpg" alt="Pizza"></a></li>
-          <li><a href="restaurants.html"><img src="Images\Square Mexican Food.jpg" alt="Pizza"></a></li>
-          <li><a href="restaurants.html"><img src="Images\Square Salad.jpg" alt="Pizza"></a></li>
-          <li><a href="restaurants.html"><img src="Images\Square East Indian Food.jpg" alt="Pizza"></a></li>
-          <li>6</li>
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
+          <li><a href="restaurants.html"><img src="Images/square-pizza.jpg" alt="Pizza"></a></li>
+          <li><a href="restaurants.html"><img src="Images/square-burger.jpg" alt="Burger"></a></li>
+          <li><a href="restaurants.html"><img src="Images/square-mexican-food.jpg" alt="Mexican"></a></li>
+          <li><a href="restaurants.html"><img src="Images/square-salad.jpg" alt="Salad"></a></li>
+          <li><a href="restaurants.html"><img src="Images/square-east-indian-food.jpg" alt="Indian"></a></li>
         </ul>
 
       </div>
@@ -175,13 +189,15 @@
 
     <hr>
 
-    <footer class="links">
-      <table style="width:90%;padding:5%;">
+    <footer>
+      <table style="width:90%;padding:5%;" class="links">
+
         <tr>
           <td> <a href="contactUs.html"> Contact Us </a> </td>
-          <td> <a href="#"> About Us </a> </td>
-          <td> <a href="#"> FAQ <a> </td>
+          <td><a href="#"> About Us </a> </td>
+          <td><a href="#"> FAQ <a> </td>
         </tr>
+
       </table>
     </footer>
 
