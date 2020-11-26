@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>homePage</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="TEMP.js" defer></script>
+
     <style>
+
     .box {
       border: 2px solid grey;
-      text-align: center;
       font-size: 40px;
-      padding: 5%;
+      text-align: center;
+      padding: 10px;
     }
+
     input {
-      width: 100%;
+      width: 80vw;
       height: 50px;
       font-size: 50%;
       padding: 1%;
@@ -32,54 +38,133 @@
     input[type=submit]:hover {
       background-color: #222222
     }
-    td {
-      /* padding: 10px; */
 
+    :root {
+      --marquee-width: 90vw;
+      --marquee-height: 20vw;
+      /* --marquee-elements: 9; */
+      --marquee-elements-displayed: 4;
+      --marquee-element-width: calc(var(--marquee-width)/var(--marquee-elements-displayed));
+      --marquee-animation-duration: calc(var(--marquee-elements)*3s)
+
+    }
+
+    .marquee, .marquee-content, .marquee-content li{
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+    .marquee {
+      display: flex;
+      align-items: center;
+      width: var(--marquee-width);
+      height: var(--marquee-height);
+      background-color: grey;
+      overflow: hidden;
+      position: relative;
+
+      /* border: 2px solid black; */
+    }
+    .marquee::before, .marquee::after {
+      position: absolute;
+      top: 0;
+      width: 10rem;
+      height: 100%;
+      content: "";
+      z-index: 1;
+    }
+    .marquee::before {
+      left: 0;
+      background: linear-gradient(to right, grey 0%, transparent 100%);
+    }
+    .marquee::after {
+      right: 0;
+      background: linear-gradient(to left, grey 0%, transparent 100%);
+    }
+    .marquee-content {
+      list-style: none;
+      height: 100%;
+      display: flex;
+      animation: scrolling var(--marquee-animation-duration) linear infinite;
+
+    }
+    @keyframes scrolling {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-1*var(--marquee-element-width)*var(--marquee-elements))); }
+    }
+    .marquee-content:hover {
+      animation-play-state: paused;
+    }
+    .marquee-content li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: var(--marquee-element-width);
+      flex-shrink: 0;
+      font-size: calc(var(--marquee-height)*2/3);
+      /* font-size: 5rem; */
+
+      white-space: nowrap;
+
+      /* border: 1px solid white; */
     }
     </style>
 
-    <link rel="stylesheet" href="style.css">
   </head>
   <body>
 
-      <div class="box">
-        <form action="restaurants.html">
+    <div class="box">
+      <form action="restaurants.html">
 
-          <input type="text" id="Address" name="Address" placeholder="Enter Your address"
-          size="50">
+        <input type="text" id="Address" name="Address" placeholder="Enter Your address">
 
-          <input type="submit" value="Restaurants Near You"><br>
-        </form>
+        <input type="submit" value="Restaurants Near You"><br>
+      </form>
+    </div>
+
+    <br>
+
+    <div style="display: flex; justify-content: center;">
+      <div class="marquee">
+        <ul class="marquee-content">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+
+        </ul>
       </div>
-
-      <br>
-
-      <img src="images/burger.jpg"
+    </div>
 
 
+    <!-- <a href="restaurants">
+      <div class="box">
 
-      <a href="restaurants">
-        <div class="box">
+      </div>
+    </a>
 
-        </div>
-      </a>
+    <a href="restaurants">
+      <div class="box">
 
-      <a href="restaurants">
-        <div class="box">
+      </div>
+    </a> -->
 
-        </div>
-      </a>
-
-  <hr>
-  <footer class="links">
-    <table style="width:90%; padding:5%;text-align:center">
-      <tr>
-        <td> <a href="contactUs.html"> Contact Us </a> </td>
-        <td> <a href="#"> About Us </a> </td>
-        <td> <a href="#"> FAQ <a> </td>
-      </tr>
-    </table>
-  </footer>
+    <br>
+    <hr>
+    <footer class="links">
+      <table style="width:90%; padding:5%;text-align:center">
+        <tr>
+          <td> <a href="contactUs.html"> Contact Us </a> </td>
+          <td> <a href="#"> About Us </a> </td>
+          <td> <a href="#"> FAQ <a> </td>
+        </tr>
+      </table>
+    </footer>
 
 
   </body>
