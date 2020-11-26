@@ -1,3 +1,5 @@
+
+
 if(document.readyState == 'loading'){
   document.addEventListener('DOMContentLoaded', ready)
 }else{
@@ -25,13 +27,19 @@ function ready() {
   }
   document.getElementsByClassName('btn-purchase')[0].addEventListener('click',purchaseClicked)
 }
-
+// CHange this button where it directs you to order summary
 function purchaseClicked() {
   alert('Thank you for your purchase')
   var cartItems = document.getElementsByClassName('cart-items')[0]
+
+  let sum = document.getElementsByClassName("summary")[0]
+ 
   while (cartItems.hasChildNodes()) {
-      cartItems.removeChild(cartItems.firstChild)
+    sum.append(cartItems.firstChild);
+    cartItems.removeChild(cartItems.firstChild)
   }
+  document.getElementById("summary-container").style.display = "block";
+
   updateCartTotal()
 }
 
@@ -49,6 +57,7 @@ function purchaseClicked() {
           input.value = 1
       }
       updateCartTotal()
+      
   }
   //This function checks whether the button 'ADD To Cart' has been clicked
   function addToCartClicked(event){
@@ -85,6 +94,7 @@ function purchaseClicked() {
       </div>` // take the entire div tag for the item
     cartRow.innerHTML = cartRowContents
     cartItems.append(cartRow)
+
     // Check if the following buttons are pressed
     cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem) 
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
@@ -106,3 +116,13 @@ function purchaseClicked() {
       }
       document.getElementsByClassName('cart-total-price')[0].innerText = total
   }
+
+ /* 
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+  */
