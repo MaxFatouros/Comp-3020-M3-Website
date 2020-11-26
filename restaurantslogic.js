@@ -54,7 +54,7 @@ const renderRest = () => {
             <h4> Distance:${distance}km </h4>
             <h4> MoneyRate:${expenseRating} </h4>
           <div>
-          <a href="/components/restaurant${id}.html"> more </a> 
+          <a href="components/restaurant${id}.html"> more </a> 
 		  <div> 
         `;
     ul.appendChild(li);
