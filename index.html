@@ -11,24 +11,45 @@
     <style>
 
     .box {
-      border: 2px solid grey;
       font-size: 40px;
       text-align: center;
-      padding: 10px;
+      /* margin-top: 30vh; */
+      /* margin-bottom: 10vh; */
+      /* padding: 1vh; */
+      padding-top: 30vh;
+      padding-bottom: 10vh;
+      background-image: url("images/Large Background Homepage.webp");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+
+      /* border: 2px solid grey; */
+
     }
 
     input {
-      width: 80vw;
+      width: 1000px;
+      /* height: 5vh; */
       height: 50px;
-      font-size: 50%;
-      padding: 1%;
+
+      font-size: 1.5rem;
+      /* font-size: 3vh; */
+      margin: 0;
+
+
+
       border-radius: 5px;
     }
-    input[type=text]:hover {
-      background-color: #fafafa;
+    input[type=text]:hover, input[type=text]:focus {
+      /* background-color: #fafafa; */
+      /* border: 3px solid black; */
+
     }
     input[type=text]:focus {
-      border: inset;
+      /* border: 4px inset grey; */
+      /* border: 2px solid grey; */
+
+
     }
     input[type=submit] {
       background-color: #333333;
@@ -40,61 +61,64 @@
     }
 
     :root {
-      --marquee-width: 90vw;
+      --marquee-width: 100vw;
       --marquee-height: 20vw;
       /* --marquee-elements: 9; */
-      --marquee-elements-displayed: 4;
+      --marquee-elements-displayed: 5;
       --marquee-element-width: calc(var(--marquee-width)/var(--marquee-elements-displayed));
-      --marquee-animation-duration: calc(var(--marquee-elements)*3s)
+      --marquee-animation-duration: calc(var(--marquee-elements)*10s)
 
     }
 
-    .marquee, .marquee-content, .marquee-content li{
+    .marquee * {
       box-sizing: border-box;
       padding: 0;
       margin: 0;
     }
+
     .marquee {
       display: flex;
       align-items: center;
       width: var(--marquee-width);
       height: var(--marquee-height);
-      background-color: grey;
+      /* background-color: grey; */
       overflow: hidden;
       position: relative;
+      margin-bottom: 5vh;
 
       /* border: 2px solid black; */
     }
-    .marquee::before, .marquee::after {
+    /* .marquee::before, .marquee::after {
       position: absolute;
       top: 0;
-      width: 10rem;
+      width: 5rem;
       height: 100%;
       content: "";
       z-index: 1;
     }
     .marquee::before {
       left: 0;
-      background: linear-gradient(to right, grey 0%, transparent 100%);
+      background: linear-gradient(to right, #eeeeee 0%, transparent 100%);
     }
     .marquee::after {
       right: 0;
-      background: linear-gradient(to left, grey 0%, transparent 100%);
-    }
+      background: linear-gradient(to left, #eeeeee 0%, transparent 100%);
+    } */
     .marquee-content {
       list-style: none;
       height: 100%;
       display: flex;
       animation: scrolling var(--marquee-animation-duration) linear infinite;
 
+
     }
     @keyframes scrolling {
       0% { transform: translateX(0); }
       100% { transform: translateX(calc(-1*var(--marquee-element-width)*var(--marquee-elements))); }
     }
-    .marquee-content:hover {
+    /* .marquee-content:hover {
       animation-play-state: paused;
-    }
+    } */
     .marquee-content li {
       display: flex;
       align-items: center;
@@ -104,9 +128,44 @@
       font-size: calc(var(--marquee-height)*2/3);
       /* font-size: 5rem; */
 
-      white-space: nowrap;
 
-      /* border: 1px solid white; */
+      white-space: nowrap;
+      padding: 15px;
+
+
+      /* border: 4px solid black; */
+    }
+    .marquee-content li img:hover {
+      animation-play-state: paused;
+    }
+
+    .marquee-content li img {
+      display: block;
+      margin: auto;
+      max-width: 800px;
+      border-radius: 10%;
+      box-shadow: 5px 10px 10px #888888;
+
+
+
+
+
+      width: 95%;
+      /* size: 95%; */
+      /* border: 5px solid red; */
+    }
+
+    .marquee-content li img:hover {
+      width: 100%;
+    }
+
+    footer {
+      display: flex;
+      justify-content: center;
+    }
+    footer table tr {
+      display: flex;
+      justify-content: space-around;
     }
     </style>
 
@@ -116,7 +175,7 @@
     <div class="box">
       <form action="restaurants.html">
 
-        <input type="text" id="Address" name="Address" placeholder="Enter Your address">
+        <input type="text" id="Address" name="Address" placeholder="Enter Your address"><br>
 
         <input type="submit" value="Restaurants Near You"><br>
       </form>
@@ -127,11 +186,11 @@
     <div style="display: flex; justify-content: center;">
       <div class="marquee">
         <ul class="marquee-content">
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
+          <li><a href="restaurants.html"><img src="Images\Square Pizza.jpg" alt="Pizza"></a></li>
+          <li><a href="restaurants.html"><img src="Images\Square Burger.jpg" alt="Pizza"></a></li>
+          <li><a href="restaurants.html"><img src="Images\Square Mexican Food.jpg" alt="Pizza"></a></li>
+          <li><a href="restaurants.html"><img src="Images\Square Salad.jpg" alt="Pizza"></a></li>
+          <li><a href="restaurants.html"><img src="Images\Square East Indian Food.jpg" alt="Pizza"></a></li>
           <li>6</li>
           <li>7</li>
           <li>8</li>
@@ -141,23 +200,10 @@
       </div>
     </div>
 
-
-    <!-- <a href="restaurants">
-      <div class="box">
-
-      </div>
-    </a>
-
-    <a href="restaurants">
-      <div class="box">
-
-      </div>
-    </a> -->
-
     <br>
     <hr>
     <footer class="links">
-      <table style="width:90%; padding:5%;text-align:center">
+      <table style="width:90%;padding:5%;">
         <tr>
           <td> <a href="contactUs.html"> Contact Us </a> </td>
           <td> <a href="#"> About Us </a> </td>
