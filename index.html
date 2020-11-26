@@ -9,7 +9,6 @@
     <script src="TEMP.js" defer></script>
 
     <style>
-
     .box {
       font-size: 40px;
       text-align: center;
@@ -22,34 +21,24 @@
       background-repeat: no-repeat;
       background-size: cover;
 
-
       /* border: 2px solid grey; */
-
     }
-
     input {
       width: 1000px;
       /* height: 5vh; */
       height: 50px;
-
       font-size: 1.5rem;
       /* font-size: 3vh; */
       margin: 0;
-
-
-
       border-radius: 5px;
     }
     input[type=text]:hover, input[type=text]:focus {
       /* background-color: #fafafa; */
       /* border: 3px solid black; */
-
     }
     input[type=text]:focus {
       /* border: 4px inset grey; */
       /* border: 2px solid grey; */
-
-
     }
     input[type=submit] {
       background-color: #333333;
@@ -67,7 +56,6 @@
       --marquee-elements-displayed: 5;
       --marquee-element-width: calc(var(--marquee-width)/var(--marquee-elements-displayed));
       --marquee-animation-duration: calc(var(--marquee-elements)*10s)
-
     }
 
     .marquee * {
@@ -75,7 +63,6 @@
       padding: 0;
       margin: 0;
     }
-
     .marquee {
       display: flex;
       align-items: center;
@@ -84,7 +71,7 @@
       /* background-color: grey; */
       overflow: hidden;
       position: relative;
-      margin-bottom: 5vh;
+      margin-bottom: 6vh;
 
       /* border: 2px solid black; */
     }
@@ -109,16 +96,14 @@
       height: 100%;
       display: flex;
       animation: scrolling var(--marquee-animation-duration) linear infinite;
-
-
     }
     @keyframes scrolling {
       0% { transform: translateX(0); }
       100% { transform: translateX(calc(-1*var(--marquee-element-width)*var(--marquee-elements))); }
     }
-    /* .marquee-content:hover {
+    .marquee-content:hover {
       animation-play-state: paused;
-    } */
+    }
     .marquee-content li {
       display: flex;
       align-items: center;
@@ -126,35 +111,22 @@
       width: var(--marquee-element-width);
       flex-shrink: 0;
       font-size: calc(var(--marquee-height)*2/3);
-      /* font-size: 5rem; */
-
-
       white-space: nowrap;
       padding: 15px;
 
-
       /* border: 4px solid black; */
     }
-    .marquee-content li img:hover {
-      animation-play-state: paused;
-    }
-
     .marquee-content li img {
       display: block;
       margin: auto;
       max-width: 800px;
       border-radius: 10%;
       box-shadow: 5px 10px 10px #888888;
-
-
-
-
-
       width: 95%;
       /* size: 95%; */
+
       /* border: 5px solid red; */
     }
-
     .marquee-content li img:hover {
       width: 100%;
     }
@@ -176,8 +148,8 @@
       <form action="restaurants.html">
 
         <input type="text" id="Address" name="Address" placeholder="Enter Your address"><br>
-
         <input type="submit" value="Restaurants Near You"><br>
+
       </form>
     </div>
 
@@ -185,6 +157,7 @@
 
     <div style="display: flex; justify-content: center;">
       <div class="marquee">
+
         <ul class="marquee-content">
           <li><a href="restaurants.html"><img src="Images\Square Pizza.jpg" alt="Pizza"></a></li>
           <li><a href="restaurants.html"><img src="Images\Square Burger.jpg" alt="Pizza"></a></li>
@@ -195,13 +168,13 @@
           <li>7</li>
           <li>8</li>
           <li>9</li>
-
         </ul>
+
       </div>
     </div>
 
-    <br>
     <hr>
+
     <footer class="links">
       <table style="width:90%;padding:5%;">
         <tr>
