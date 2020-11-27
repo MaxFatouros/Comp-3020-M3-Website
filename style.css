@@ -27,7 +27,13 @@ body {
 }
 
 
-
+nav {
+  position: absolute;
+  right: 0px;
+  /* text-align: right; */
+  margin: 3vw;
+  /* margin-top: 7vh; */
+}
 
 .links a:link{
   color: #555;

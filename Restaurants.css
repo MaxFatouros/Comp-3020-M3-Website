@@ -20,6 +20,8 @@ body {
   padding: 2rem;
   background-color: #1f8ac0;
   position: fixed;
+
+  border: 2px solid black;
 }
 
 li {
@@ -70,6 +72,7 @@ button:focus {
   background-size: cover;
   background-position: center;
 }
+
 .selected {
   background-color: black;
 }

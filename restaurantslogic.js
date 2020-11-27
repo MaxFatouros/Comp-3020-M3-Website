@@ -49,14 +49,14 @@ const renderRest = () => {
     li.innerHTML = `
 		  <!-- <div class="image" style="background-image: url(${image}); background-size: 100% 100%;" ;> -->
       <h1 style="margin: 0;"> ${name} </h1>
-      <div class="image" style="background-image: url(${image});">
-          <a href="components/restaurant${id}.html"> more </a>
-		  </div>
-      <div class="description";>
-        <h4> HealthMeter:${healthLevel} </h4>
-        <h4> Distance:${distance}km </h4>
-        <h4> MoneyRate:${expenseRating} </h4>
-      </div>
+        <a href="components/restaurant${id}.html">
+        <div class="image" style="background-image: url(${image});"></div>
+        </a>
+        <div class="description";>
+          <h4> HealthMeter:${healthLevel} </h4>
+          <h4> Distance:${distance}km </h4>
+          <h4> MoneyRate:${expenseRating} </h4>
+        </div>
         `;
     ul.appendChild(li);
   });
