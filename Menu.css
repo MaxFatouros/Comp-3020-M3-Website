@@ -85,3 +85,41 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
+
+.custom {
+  position: fixed;
+  top: 5%;
+  left: 30%;
+  box-shadow: 0px 0px 300px black;
+  background-color: white;
+  z-index: 100;
+}
+
+.custom-padding {
+  padding: 10rem 10rem;
+}
+
+.custom-btn {
+  float: right;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.summary-container {
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  box-shadow: 0px 0px 300px black;
+  background-color: white;
+  z-index: 100;
+}
+
+.summary-flex {
+  display: flex;
+}
+
+#confirm {
+  float: right;
+  padding: 0.5rem;
+  cursor: pointer;
+}
