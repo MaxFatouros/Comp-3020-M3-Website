@@ -31,20 +31,20 @@ const allRestaurants = [
     id:4,
 	image: "Images/Pizza%20Joint.jpg"
   },
-  {
-    name: "East Indian",
-    healthLevel: 5.0,
-    expenseRating: 4.5,
-    distance: 11,
-    id:5,
-	image: "Images/East%20Indian.webp"
-  },
-  {
-    name: "East Indian",
-    healthLevel: 1.0,
-    expenseRating: 5.0,
-    distance: 10,
-    id:6,
-	image: "Images/East%20Indian.webp"
-  },
+  // {
+  //   name: "East Indian",
+  //   healthLevel: 5.0,
+  //   expenseRating: 4.5,
+  //   distance: 11,
+  //   id:5,
+	// image: "Images/East%20Indian.webp"
+  // },
+  // {
+  //   name: "East Indian",
+  //   healthLevel: 1.0,
+  //   expenseRating: 5.0,
+  //   distance: 10,
+  //   id:6,
+	// image: "Images/East%20Indian.webp"
+  // },
 ];

@@ -9,8 +9,7 @@ for (let i=0; i<marqueeElementsDisplayed; i++) {
 }
 
 
-
-const address = document.getElementById("address");
+var address = document.getElementById("address");
 const form = document.getElementById("form");
 const errorElement = document.getElementById("error");
 

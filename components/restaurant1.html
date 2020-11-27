@@ -10,15 +10,25 @@
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="orderSummary.css" />
     <script src="cart.js" async></script>
-
   </head>
   <body>
+
     <nav align="right" class="links">
       <a href="../index.html" > Home </a> /
       <a href="../restaurants.html"> Restaurants</a> /
-      menu
+      Menu
     </nav>
+    <div style="text-align: left;" class="logo">
+      <a href="../index.html">
+        <img src="../images/icon-leaf-logo.png" alt="Logo">
+      </a>
+
+      <h2 style="position:absolute; top:50px; left:200px;right:200px;text-align:center;"><span>Fresh Food from our Menu</span></h4>
+
+
+    </div>
     <div class="container">
+
       <div class="cart">
         <h2 class="section-header">CART</h2>
         <div class="cart-row">
@@ -36,9 +46,9 @@
         </button>
       </div>
       <div class="wrapper">
-        <div class="title">
+        <!-- <div class="title">
           <h4><span>Fresh Food from our Menu</span></h4>
-        </div>
+        </div> -->
         <div class="menu">
           <div class="single-menu">
             <img
@@ -116,22 +126,22 @@
      <div style= "display: none;" class="custom">
       <button class = "custom-btn">close</button>
        <form action="" class="custom-padding">
-          <label class="container">One
+          <label class="container">Cheese
             <input type="checkbox" checked="checked">
             <span class="checkmark"></span>
           </label>
 
-          <label class="container">Two
+          <label class="container">Bacon
             <input type="checkbox">
             <span class="checkmark"></span>
           </label>
 
-          <label class="container">Three
+          <label class="container">Onions
             <input type="checkbox">
             <span class="checkmark"></span>
           </label>
 
-          <label class="container">Four
+          <label class="container">Fries
             <input type="checkbox">
             <span class="checkmark"></span>
           </label>
@@ -139,7 +149,7 @@
        <button class = "custom-btn add-cart">Add to Cart</button>
      </div>
 
-     <div style="display: none;" class="summary-container">
+     <div style="display: none;padding-top:px" class="summary-container">
       <button  class= "custom-btn">close</button>
         <div class="summary-flex">
         <div class="summary custom-padding"></div>
@@ -161,8 +171,8 @@
                     <input type="text" id="city" name="city" placeholder="Winnipeg">
                     <div class="row">
                       <div class="col-50">
-                        <label for="state">State</label>
-                        <input type="text" id="Province" name="state" placeholder="MB">
+                        <label for="Province">Province</label>
+                        <input type="text" id="Province" name="Province" placeholder="MB">
                       </div>
                       <div class="col-50">
                         <label for="zip">Zip</label>
@@ -181,14 +191,14 @@
     </div>
     <!-- copy ends -->
 
-    <hr>
+    <!-- <hr> -->
     <footer class="links">
       <table style="width:90%;padding:5%;">
 
         <tr>
-          <td> <a href="contactUs.html"> Contact Us </a> </td>
-          <td><a href="#"> About Us </a> </td>
-          <td><a href="#"> FAQ <a> </td>
+          <td> <a href="../contactUs.html"> Contact Us </a> </td>
+          <td><a href="../aboutUs.html"> About Us </a> </td>
+          <td><a href="../faq.html"> FAQ <a> </td>
         </tr>
 
       </table>
