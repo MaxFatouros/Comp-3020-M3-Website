@@ -46,7 +46,8 @@ function ready() {
     updateCartTotal();
   });
   document.querySelector("#confirm").addEventListener("click", () => {
-    alert("Thank you for shopping");
+    alert("Thank you for shopping!\nyou will recieve an email with order information shortly");
+    location.replace("../index.html")
   });
 }
 // CHange this button where it directs you to order summary
@@ -163,10 +164,3 @@ function updateCartTotal() {
     document.getElementById("myForm").style.display = "none";
   }
   */
-
-
-
-
-
-  // document.getElementById("adr").value = address.value;
-  alert(address)
