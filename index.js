@@ -14,6 +14,7 @@ const address = document.getElementById("address");
 const form = document.getElementById("form");
 const errorElement = document.getElementById("error");
 
+
 form.addEventListener("submit", (e) => {
   let messages = [];
   if (address.value === "" || address.value == null) {
