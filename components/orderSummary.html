@@ -6,7 +6,8 @@
     <meta http-equiv="X UA-Compatible" content="ie=chrome" />
     <title>Order Summary</title>
     <link rel="stylesheet" href="./orderSummary.css" />
-    <script src="cart.js" async></script>
+
+    <script src="orderSummary.js" async></script>
   </head>
 <div class="row">
     <div class="col-75">
@@ -24,7 +25,6 @@
               <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
               <label for="city"><i class="fa fa-institution"></i> City</label>
               <input type="text" id="city" name="city" placeholder="Winnipeg">
-  
               <div class="row">
                 <div class="col-50">
                   <label for="state">State</label>
@@ -35,18 +35,8 @@
                   <input type="text" id="zip" name="Postal Code" placeholder="R2N 2N3">
                 </div>
               </div>
-            </div> 
-            <h2 class="section-header">CART</h2>
-            <div class="cart-row">
-              <span class="cart-item cart-header cart-column">ITEM</span>
-              <span class="cart-price cart-header cart-column">PRICE</span>
-              <span class="cart-quantity cart-header cart-column">QUANTITY</span>
             </div>
-            <div class="#cart-items-orderSummary"></div>
-            <div class="cart-total">
-              <strong class="cart-total-title">Total</strong>
-              <span class="cart-total-price">$0</span>
-            </div>
+            
           </div>
         </form>
       </div>
