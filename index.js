@@ -9,13 +9,14 @@ for (let i=0; i<marqueeElementsDisplayed; i++) {
 }
 
 
-var address = document.getElementById("address");
+const address = document.getElementById("address");
 const form = document.getElementById("form");
 const errorElement = document.getElementById("error");
 
 
 form.addEventListener("submit", (e) => {
   let messages = [];
+  
   if (address.value === "" || address.value == null) {
     messages.push("Address cannot be empty");
   }

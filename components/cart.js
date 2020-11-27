@@ -164,3 +164,40 @@ function updateCartTotal() {
     document.getElementById("myForm").style.display = "none";
   }
   */
+
+
+  const fullname = document.getElementById("fname")
+  const email = document.getElementById("email")
+  const address = document.getElementById("adr")
+  const city = document.getElementById("city")
+  const province = document.getElementById("province")
+  const zip = document.getElementById("zip")
+
+
+
+
+
+
+  // document.querySelector("#confirm").addEventListener("click", (e) => {
+  //   let messages = [];
+  //
+  //
+  //   if (fullname.value === "" || fullname.value == null
+  //    || email.value === "" || email.value == null
+  //    || address.value === "" || address.value == null
+  //    || city.value === "" || city.value == null
+  //    || province.value === "" || province.value == null
+  //    || zip.value === "" || zip.value == null) {
+  //     messages.push("forms cannot be empty");
+  //   }
+  //
+  //   if (messages.length > 0) {
+  //     e.preventDefault();
+  //     window.alert(messages[0]);
+  //   }
+  //   else {
+  //     e.alert("Thank you for shopping!\nyou will recieve an email with order information shortly");
+  //     location.replace("../index.html")
+  //   }
+  //
+  // });
