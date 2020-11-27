@@ -16,7 +16,7 @@ body {
   align-self: flex-start;
   display: flex;
   flex-direction: column;
-  margin-left: 8vw;
+  margin-left: 10vw;
   padding: 2rem;
   background-color: #1f8ac0;
   position: fixed;
