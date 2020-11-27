@@ -1,0 +1,1 @@
+open index.html is the home page to start
