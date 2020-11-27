@@ -1,71 +1,39 @@
-let ul = document.querySelector("#restList");
-render = false;
+const root = document.documentElement;
+const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+const marqueeContent = document.querySelector(".marquee-content");
 
-document.querySelector("#health").addEventListener("click", () => {
-  render = true;
-  allRestaurants.sort((a, b) => b.healthLevel - a.healthLevel);
-  for (item of document.querySelectorAll("li")) {
-    item.remove();
-  }
-  for (btn of document.querySelectorAll("button")) {
-    btn.classList.remove("selected");
-  }
-  document.querySelector("#health").classList.toggle("selected");
-  renderRest();
-});
+root.style.setProperty("--marquee-elements", marqueeContent.children.length);
 
-document.querySelector("#money").addEventListener("click", () => {
-  render = true;
-  allRestaurants.sort((a, b) => a.expenseRating - b.expenseRating);
-  for (item of document.querySelectorAll("li")) {
-    item.remove();
-  }
-  for (btn of document.querySelectorAll("button")) {
-    btn.classList.remove("selected");
-  }
-  document.querySelector("#money").classList.toggle("selected");
-
-  renderRest();
-});
-
-document.querySelector("#distance").addEventListener("click", () => {
-  render = true;
-  allRestaurants.sort((a, b) => a.distance - b.distance);
-  for (item of document.querySelectorAll("li")) {
-    item.remove();
-  }
-  for (btn of document.querySelectorAll("button")) {
-    btn.classList.remove("selected");
-  }
-  document.querySelector("#distance").classList.add("selected");
-
-  renderRest();
-});
-
-const renderRest = () => {
-  allRestaurants.map(({ name, distance, expenseRating, healthLevel, id }) => {
-    li = document.createElement("li");
-    li.classList.add("restaurant");
-    li.innerHTML = `
-          <h1> ${name} </h1>
-          <div class="description">
-            <h4> HealthMeter:${healthLevel} </h4>
-            <h4> Distance:${distance}km </h4>
-            <h4> MoneyRate:${expenseRating} </h4>
-          <div>
-          <a href="/components/restaurant${id}.html"> more </a>
-        `;
-    ul.appendChild(li);
-  });
-};
-
-if (!render) {
-  renderRest();
+for (let i=0; i<marqueeElementsDisplayed; i++) {
+  marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
 }
 
-let restaurants = document.querySelectorAll(".restaurant");
 
-for (res of restaurants) {
-  res.addEventListener("click", ()=> {
-  })
-}
+
+const address = document.getElementById("address");
+const form = document.getElementById("form");
+const errorElement = document.getElementById("error");
+
+form.addEventListener("submit", (e) => {
+  let messages = [];
+  if (address.value === "" || address.value == null) {
+    messages.push("Address cannot be empty");
+  }
+
+  if ( !/\d/.test(address.value) ) {
+    messages.push("Address must contain street number");
+  }
+
+  if ( !/[a-zA-Z]/.test(address.value) ) {
+    messages.push("Address must contain street name");
+  }
+
+  if ( !/(dr|drive|bay|avenue|ave|bend|boulevard|blvd|street|st|end|route|rte)/i.test(address.value) ) {
+    messages.push("Address must contain suffix eg. drive");
+  }
+
+  if (messages.length > 0) {
+    e.preventDefault();
+    window.alert(messages[0]);
+  }
+})
